@@ -31,10 +31,6 @@ def inp_user():
     return userAnsewrs
    
 
-def render_kk():
-    editting  = reading_file('madlib_cli/template.txt')
-    print(editting)
-
 def save_to_anew(result):
     with open("madlib_cli/newfile.txt", "w") as file:
         file.write(result)
@@ -60,3 +56,4 @@ if __name__ == "__main__":
     user_answer = getting_values[0]
     needed_value = getting_values[1] 
     merge(file_to_open, user_answer)
+    save_to_anew(merge(file_to_open, user_answer))
